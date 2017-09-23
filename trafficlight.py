@@ -4,27 +4,32 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-SleepTimeL = 5.0
+SleepTimeL = 0.5
 pinList = [17, 27, 22]
 
 # Setup
 for pin in pinList:
     GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin, GPIO.LOW)
+    GPIO.output(pin, GPIO.HIGH)
     time.sleep(SleepTimeL)
 def on(pin):
-  GPIO.output(pin, GPIO.HIGH)
+  GPIO.output(pin, GPIO.LOW)
   print(pin)
   time.sleep(SleepTimeL)
-  GPIO.output(pin, GPIO.LOW)
+  GPIO.output(pin, GPIO.HIGH)
 
 # Main loop
 try:
   while True:
-    [on(pin) for pin in pinList]
+    GPIO.output(17, GPIO.LOW)
+    time.sleep(SleepTimeL)
+    GPIO.output(27, GPIO.Low)
+    time.sleep(SleepTimeL)
+    GPIO.output(27, GPIO.LOW)
+    time.sleep(SleepTimeL)
 except KeyboardInterrupt:
     for pin in pinList:
-        GPIO.output(pin, GPIO.LOW)
+        GPIO.output(pin, GPIO.HIGH)
         time.sleep(SleepTimeL)
     pass
 
