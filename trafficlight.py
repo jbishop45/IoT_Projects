@@ -4,7 +4,7 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-SleepTimeL = 0.5
+SleepTimeL = 5.0
 pinList = [17, 27, 22]
 
 # Setup
