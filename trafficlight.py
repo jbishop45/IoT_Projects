@@ -10,13 +10,14 @@ pinList = [17, 27, 22]
 # Setup
 for pin in pinList:
     GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin,0)
+    GPIO.output(pin,1)
 
 def on(pin):
-    GPIO.output(pin,1)
-    print(pin)
-    time.sleep(SleepTimeL)
     GPIO.output(pin,0)
+    print([pin,' on']
+    time.sleep(SleepTimeL)
+    GPIO.output(pin,1)
+    print([pin,' off'])
     time.sleep(SleepTimeL)
 
 # Main loop
