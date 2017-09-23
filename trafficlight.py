@@ -4,7 +4,7 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-SleepTimeL = 1
+SleepTimeL = input('fuck you, enter a #')
 pinList = [17, 27, 22]
 
 # Setup
