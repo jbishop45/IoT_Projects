@@ -24,9 +24,9 @@ def on(pin):
 
 # Main loop
 try:
-while True:
-    [on(pin) for pin in pinList]
-except KeyboardInterrupt:
-    pass
+    while True:
+        [on(pin) for pin in pinList]
+    except KeyboardInterrupt:
+        pass
 
 GPIO.cleanup()
