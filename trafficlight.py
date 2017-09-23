@@ -28,9 +28,6 @@ try:
     GPIO.output(27, GPIO.LOW)
     time.sleep(SleepTimeL)
 except KeyboardInterrupt:
-    for pin in pinList:
-        GPIO.output(pin, GPIO.HIGH)
-        time.sleep(SleepTimeL)
     pass
 
 GPIO.cleanup()
