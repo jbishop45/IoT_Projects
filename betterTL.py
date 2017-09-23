@@ -7,18 +7,18 @@ GPIO.setup(22, GPIO.OUT)
 
 try:
     while True:
-	GPIO.output(17, 1)         # set GPIO24 to 1/GPIO.HIGH/True  
-	sleep(2)                   # wait a second
-	GPIO.output(17, 0)         # set GPIO24 to 0/GPIO.LOW/False  
-	sleep(0.5)                 # wait a second
-	GPIO.output(27, 1)          
-	sleep(2)
-	GPIO.output(27, 0)
-	sleep(0.5)
-	GPIO.output(22, 1)
-	sleep(2)
-	GPIO.output(22, 0)
-	sleep(0.5)
+		GPIO.output(17, 1)         # set GPIO24 to 1/GPIO.HIGH/True  
+		sleep(2)                   # wait a second
+		GPIO.output(17, 0)         # set GPIO24 to 0/GPIO.LOW/False  
+		sleep(0.5)                 # wait a second
+		GPIO.output(27, 1)          
+		sleep(2)
+		GPIO.output(27, 0)
+		sleep(0.5)
+		GPIO.output(22, 1)
+		sleep(2)
+		GPIO.output(22, 0)
+		sleep(0.5)
 
 
 
