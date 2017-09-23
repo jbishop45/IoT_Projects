@@ -7,12 +7,11 @@ GPIO.setup(27, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 
 wait = input('fuck you, enter a nombre ')
+number = str(wait)
 
 
 try:
-
-
-	if int(str(wait)[:1]) == 0:
+	if int(number[0]) == 0:
 		while True:
 			num = random.randint(1,3)
 			if num == 1:
