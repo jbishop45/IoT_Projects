@@ -10,13 +10,13 @@ pinList = [17, 27, 22]
 # Setup
 for pin in pinList:
     GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin, GPIO.HIGH)
+    GPIO.output(pin, GPIO.LOW)
     time.sleep(SleepTimeL)
 def on(pin):
-  GPIO.output(pin, GPIO.LOW)
+  GPIO.output(pin, GPIO.HIGH)
   print(pin)
   time.sleep(SleepTimeL)
-  GPIO.output(pin, GPIO.HIGH)
+  GPIO.output(pin, GPIO.LOW)
 
 # Main loop
 try:
@@ -24,7 +24,7 @@ try:
     [on(pin) for pin in pinList]
 except KeyboardInterrupt:
     for pin in pinList:
-        GPIO.output(pin, GPIO.HIGH)
+        GPIO.output(pin, GPIO.LOW)
         time.sleep(SleepTimeL)
     pass
 
