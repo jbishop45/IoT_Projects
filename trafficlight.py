@@ -1,10 +1,10 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
-import time
+include time
 
 GPIO.setmode(GPIO.BCM)
 
-SleepTimeL = 0.5
+SleepTimeL = 2.0
 pinList = [17, 27, 22]
 
 # Setup
