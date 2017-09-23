@@ -12,7 +12,7 @@ wait = input('fuck you, enter a nombre ')
 try:
 
 
-	if wait == 0:
+	if int(str(wait)[:1]) == 0:
 		while True:
 			num = random.randint(1,3)
 			if num == 1:
