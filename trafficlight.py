@@ -26,7 +26,7 @@ def on(pin):
 try:
     while True:
         [on(pin) for pin in pinList]
-    except KeyboardInterrupt:
-        pass
+except KeyboardInterrupt:
+    pass
 
 GPIO.cleanup()
