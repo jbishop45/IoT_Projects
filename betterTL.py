@@ -12,7 +12,7 @@ wait = input('fuck you, enter a #')
 try:
 
 
-	if wait == r:
+	if wait == 0:
 		while True:
 			num = random.randint(1,3)
 			if num == 1:
