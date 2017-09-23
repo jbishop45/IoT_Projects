@@ -13,11 +13,11 @@ for pin in pinList:
     GPIO.output(pin,1)
 
 def on(pin):
-    GPIO.output(pin,0)
+    GPIO.output(pin,1)
     print([pin,' on'])
     print(GPIO.input(pin))
     time.sleep(SleepTimeL)
-    GPIO.output(pin,1)
+    GPIO.output(pin,0)
     print([pin,' off'])
     print(GPIO.input(pin))
     time.sleep(SleepTimeL)
