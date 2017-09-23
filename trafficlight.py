@@ -23,6 +23,9 @@ try:
   while True:
     [on(pin) for pin in pinList]
 except KeyboardInterrupt:
-  pass
+    for pin in pinList:
+        GPIO.output(pin, GPIO.HIGH)
+        time.sleep(SleepTimeL)
+    pass
 
 GPIO.cleanup()
