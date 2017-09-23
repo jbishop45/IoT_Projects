@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO            # import RPi.GPIO module 
-import sys 
+import random
 from time import sleep             # lets us have a delay  
 GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
 GPIO.setup(17, GPIO.OUT)
@@ -10,7 +10,27 @@ wait = input('fuck you, enter a #')
 
 
 try:
-    while True:
+
+
+	if wait == r:
+		while True:
+			num = random.randint(1,3)
+			if num == 1:
+				GPIO.output(17, 1)          
+				sleep(3)
+				GPIO.output(17, 0)
+			if num == 2:
+				GPIO.output(27, 1)          
+				sleep(3)
+				GPIO.output(27, 0)
+			if num == 3:
+				GPIO.output(22, 1)          
+				sleep(3)
+				GPIO.output(22, 0)
+
+
+
+	while True:
 		GPIO.output(17, 1)         # set GPIO24 to 1/GPIO.HIGH/True  
 		sleep(wait)                   # wait a second
 		GPIO.output(17, 0)         # set GPIO24 to 0/GPIO.LOW/False  
@@ -18,11 +38,11 @@ try:
 		GPIO.output(27, 1)          
 		sleep(wait)
 		GPIO.output(27, 0)
-		sleep(wait)
+		sleep(.1)
 		GPIO.output(22, 1)
 		sleep(wait)
 		GPIO.output(22, 0)
-		sleep(wait)
+		sleep(.1)
 
 
 
