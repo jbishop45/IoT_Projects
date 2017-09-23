@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
-include time
+import time
 
 GPIO.setmode(GPIO.BCM)
 
@@ -11,11 +11,11 @@ pinList = [17, 27, 22]
 for pin in pinList:
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, GPIO.HIGH)
-    time.sleep(SleepTimeL)
+
 def on(pin):
     GPIO.output(pin, GPIO.LOW)
     print(pin)
-    time.sleep(SleepTimeL)
+    #time.sleep(SleepTimeL)
     GPIO.output(pin, GPIO.HIGH)
 
 # Main loop
