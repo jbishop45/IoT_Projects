@@ -15,11 +15,11 @@ for pin in pinList:
 def on(pin):
     GPIO.output(pin,0)
     print([pin,' on'])
-    GPIO.input(pin)
+    print(GPIO.input(pin))
     time.sleep(SleepTimeL)
     GPIO.output(pin,1)
     print([pin,' off'])
-    GPIO.input(pin)
+    print(GPIO.input(pin))
     time.sleep(SleepTimeL)
 
 # Main loop
