@@ -4,7 +4,7 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-SleepTimeL = 10
+SleepTimeL = 1
 pinList = [17, 27, 22]
 
 # Setup
@@ -17,6 +17,7 @@ def on(pin):
     print(pin)
     time.sleep(SleepTimeL)
     GPIO.output(pin, GPIO.HIGH)
+    time.sleep(SleepTimeL)
 
 # Main loop
 try:
