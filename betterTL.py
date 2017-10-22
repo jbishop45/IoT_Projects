@@ -5,6 +5,8 @@ GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(27, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
+intervals = [.3, .5, .8, 1, 2, 3, 4, 5, 6, 7]
+
 
 wait = input('fuck you, enter a nombre ')
 
@@ -15,17 +17,18 @@ try:
 	if wait == 0:
 		while True:
 			num = random.randint(1,3)
+			interval = random.randint(1,3)
 			if num == 1:
 				GPIO.output(17, 1)          
-				sleep(3)
+				sleep(random.shuffle(intervals))
 				GPIO.output(17, 0)
 			if num == 2:
 				GPIO.output(27, 1)          
-				sleep(3)
+				sleep(random.shuffle(intervals))
 				GPIO.output(27, 0)
 			if num == 3:
 				GPIO.output(22, 1)          
-				sleep(3)
+				sleep(random.shuffle(intervals))
 				GPIO.output(22, 0)
 
 
