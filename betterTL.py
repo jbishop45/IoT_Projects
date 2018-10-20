@@ -22,7 +22,7 @@ try:
 		if num == 1:
 			GPIO.output(17, 1)          
 			sleep(interval)
-					GPIO.output(17, 0)
+			GPIO.output(17, 0)
 		if num == 2:
 			GPIO.output(27, 1)          
 			sleep(interval)
