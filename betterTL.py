@@ -16,21 +16,21 @@ GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input p
 try:
 	while True:
 
-		if GPIO.input(2) == GPIO.HIGH:
-				num = random.randint(1,3)
-				interval = random.randint(1,7)
-				if num == 1:
-					GPIO.output(17, 1)          
-					sleep(interval)
+		#if GPIO.input(2) == GPIO.HIGH:
+		num = random.randint(1,3)
+		interval = random.randint(1,15)
+		if num == 1:
+			GPIO.output(17, 1)          
+			sleep(interval)
 					GPIO.output(17, 0)
-				if num == 2:
-					GPIO.output(27, 1)          
-					sleep(interval)
-					GPIO.output(27, 0)
-				if num == 3:
-					GPIO.output(22, 1)          
-					sleep(interval)
-					GPIO.output(22, 0)
+		if num == 2:
+			GPIO.output(27, 1)          
+			sleep(interval)
+			GPIO.output(27, 0)
+		if num == 3:
+			GPIO.output(22, 1)          
+			sleep(interval)
+			GPIO.output(22, 0)
 
 
 
