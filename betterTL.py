@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO            # import RPi.GPIO module 
 import random
 from time import sleep             # lets us have a delay  
+GPIO.setwarnings(False) # Ignore warning
 GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(27, GPIO.OUT)
