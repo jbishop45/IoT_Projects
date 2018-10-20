@@ -17,7 +17,6 @@ try:
 	while True:
 
 		if GPIO.input(2) == GPIO.HIGH:
-			while True:
 				num = random.randint(1,3)
 				interval = random.randint(1,7)
 				if num == 1:
